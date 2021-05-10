@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Post a new announcement </h2>
+
+<form action="/api/save" name="announcements" method="POST">
+  <label for="title">Title</label>
+  <input type="text" id="title" name="title">Title </input>
+  <label for="description">Description</label><br>
+  <input type="text" name="description" id="description"> Description </input>
+  <input type="submit" value="Submit"/>
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
