@@ -1,6 +1,3 @@
-
-
-
 require('dotenv').config();
 const {
   DATABASE_URL,
@@ -10,18 +7,18 @@ const {
 
 exports.handler = async event => {
   
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method not allowed" };
+  }
+
+  // unpack the form submission data
   const querystring = require("querystring");
   const {
     title,
     description
   } = querystring.parse(event.body);
   
-    const data = JSON.parse(event.body)
-
-    
-  console.log(data);
-  console.log(querystring.parse(event.body));
-  
+  console.log(title, description);
   
   return {
     statusCode: 200,
