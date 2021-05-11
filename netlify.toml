@@ -13,3 +13,8 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+[[redirects]]
+  from = "/news/*"
+  to = "/.netlify/functions/odb-view-item/:splat"
+  status = 200

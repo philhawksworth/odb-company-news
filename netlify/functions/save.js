@@ -33,17 +33,14 @@ exports.handler = async event => {
   ]);
   
   console.log(data, error);
-
-
-  // TODO: return a 302 to redirect the user to the new page location
-  // URL: `/news/${data[0].id}`
-
-  console.log(`NEW URL: /news/${data[0].id}`);
   
+  console.log(`NEW URL: /news/${data[0].id}`);
 
   return {
-    statusCode: 200,
-    body: "Ok"
-  } 
+    statusCode: 302,
+    headers: {
+      Location: `/news/${data[0].id}`,
+    },
+  }
 
 }
