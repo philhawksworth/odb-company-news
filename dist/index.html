@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center>
+      <h1>Post a new announcement</h1>
 
-<h2>Post a new announcement </h2>
-
-<form action="/api/save" name="announcements" method="POST">
-  <label for="title">Title</label>
-  <input type="text" id="title" name="title">Title </input>
-  <label for="description">Description</label><br>
-  <input type="text" name="description" id="description"> Description </input>
-  <input type="submit" value="Submit"/>
-</form> 
-
-
-</body>
+      <form action="/api/save" name="announcements" method="POST">
+        <div className="main">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" /> <br />
+          <label for="description">Description</label>
+          <input type="text" name="description" id="description" />
+        </div>
+        <input id="btn" type="submit" value="Submit" />
+      </form>
+    </center>
+  </body>
 </html>
